@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 public class newInstance {
 	
 	private JButton button1,button2,button3,button4;
+	private int a;
 	
 	
 	public newInstance() {
