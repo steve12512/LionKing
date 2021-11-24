@@ -61,8 +61,8 @@ public class lionKing {
 		JButton beginButton = new JButton("ΑΡΧΙΣΕ");
 		beginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ImageIcon img = new ImageIcon("irony.png");
-				JOptionPane.showMessageDialog(null, "Let's see what you know about the 12 Feats of Hercules!", "Lioncape", JOptionPane.INFORMATION_MESSAGE, img);
+				final ImageIcon icon1 = new ImageIcon("img/Spinellis1.png");
+				JOptionPane.showMessageDialog(null, "Let's see what you know about the 12 Feats of Hercules", "Lioncape", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				frame.dispose();
 				NemeaQuestionnaire1 nemea1 = new NemeaQuestionnaire1();
 				nemea1.setVisible(true);

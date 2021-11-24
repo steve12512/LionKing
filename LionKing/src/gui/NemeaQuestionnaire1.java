@@ -60,7 +60,8 @@ public class NemeaQuestionnaire1 extends JFrame {
 		JButton answerButtonA = new JButton("With his crossbow and sword.");
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "BZZZZZZZZZZZZZZZZZ \nTry Again");
+				final ImageIcon icon1 = new ImageIcon("img/Spinellis2.png");
+				JOptionPane.showMessageDialog(null, "BZZZZZZZZZZZZZZZZZ \\nTry Again", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 			}
 		});
 		answerButtonA.setForeground(new Color(128, 128, 128));
