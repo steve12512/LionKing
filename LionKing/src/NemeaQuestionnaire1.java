@@ -71,7 +71,8 @@ public class NemeaQuestionnaire1 extends JFrame {
 		JButton answerButtonB = new JButton("With his bare hands.");
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "### CONGRATULATIONS ###");
+				final ImageIcon icon1 = new ImageIcon("img/Spinellis5.png");
+				JOptionPane.showMessageDialog(null, "BRAVO", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				dispose();
 				NemeaQuestionnaire2 nemea2 = new NemeaQuestionnaire2();
 				nemea2.setVisible(true);
@@ -85,7 +86,8 @@ public class NemeaQuestionnaire1 extends JFrame {
 		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "BZZZZZZZZZZZZZZZZZ \nTry Again");
+				final ImageIcon icon1 = new ImageIcon("img/Spinellis4.png");
+				JOptionPane.showMessageDialog(null, "BZZZZZZZZZZZZZZZZZ \\\\nTry Again", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 			}
 		});
 		answerButtonC.setForeground(new Color(128, 128, 128));
@@ -95,7 +97,8 @@ public class NemeaQuestionnaire1 extends JFrame {
 		JButton answerButtonD = new JButton("I don't know.");
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "YOU HAVE TO KNOW \nTry Again");
+				final ImageIcon icon1 = new ImageIcon("img/Spinellis3.png");
+				JOptionPane.showMessageDialog(null, "YOU HAVE TO KNOW \\nTry Again", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 			}
 		});
 		answerButtonD.setForeground(new Color(128, 128, 128));

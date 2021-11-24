@@ -57,7 +57,8 @@ public class NemeaQuestionnaire2 extends JFrame {
 		JButton answerButtonA = new JButton("He wear it on his back.");
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "### CONGRATULATIONS ###");
+				final ImageIcon icon1 = new ImageIcon("img/Spinellis6.png");
+				JOptionPane.showMessageDialog(null, "BRAVO", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				dispose();
 			}
 		});
@@ -68,7 +69,8 @@ public class NemeaQuestionnaire2 extends JFrame {
 		JButton answerButtonB = new JButton("He threw it.");
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "BZZZZZZZZZZZZZZZZZ \nTry Again");
+				final ImageIcon icon1 = new ImageIcon("img/Spinellis9.png");
+				JOptionPane.showMessageDialog(null, "BZZZZZZZZZZZZZZZZZ \\nTry Again", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 			}
 		});
 		answerButtonB.setForeground(new Color(128, 128, 128));
@@ -79,7 +81,8 @@ public class NemeaQuestionnaire2 extends JFrame {
 		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "Yahhhhhh \nTry Again");
+				final ImageIcon icon1 = new ImageIcon("img/Spinellis8.png");
+				JOptionPane.showMessageDialog(null, "Yahhhhhhhh \\nTry Again", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 			}
 		});
 		answerButtonC.setForeground(new Color(128, 128, 128));
@@ -89,7 +92,8 @@ public class NemeaQuestionnaire2 extends JFrame {
 		JButton answerButtonD = new JButton("He made it fur and sold it.");
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "BZZZZZZZZZZZZZZZZZ \nTry Again");
+				final ImageIcon icon1 = new ImageIcon("img/Spinellis7.png");
+				JOptionPane.showMessageDialog(null, "BZZZZZZZZZZZZZZZZZ \\nTry Again", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 			}
 		});
 		answerButtonD.setForeground(new Color(128, 128, 128));
