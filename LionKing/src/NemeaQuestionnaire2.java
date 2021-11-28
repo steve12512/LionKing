@@ -60,6 +60,8 @@ public class NemeaQuestionnaire2 extends JFrame {
 				final ImageIcon icon1 = new ImageIcon("img/Spinellis6.png");
 				JOptionPane.showMessageDialog(null, "BRAVO", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				dispose();
+				NemeaQuestionnaire3 nemea3 = new NemeaQuestionnaire3();
+				nemea3.setVisible(true);
 			}
 		});
 		answerButtonA.setForeground(new Color(128, 128, 128));
@@ -100,12 +102,12 @@ public class NemeaQuestionnaire2 extends JFrame {
 		answerButtonD.setBounds(317, 210, 212, 29);
 		contentPane.add(answerButtonD);
 		
-		JLabel lNemeaLabel_2 = new JLabel("");
-		lNemeaLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		JLabel NemeaLabel_2 = new JLabel("");
+		NemeaLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		Image img = new ImageIcon(this.getClass().getResource("/lioncape.png")).getImage();
-		lNemeaLabel_2.setIcon(new ImageIcon(img));
-		lNemeaLabel_2.setBounds(6, 6, 588, 99);
-		contentPane.add(lNemeaLabel_2);
+		NemeaLabel_2.setIcon(new ImageIcon(img));
+		NemeaLabel_2.setBounds(6, 6, 588, 99);
+		contentPane.add(NemeaLabel_2);
 	}
 
 }

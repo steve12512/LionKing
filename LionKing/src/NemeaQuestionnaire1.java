@@ -105,11 +105,11 @@ public class NemeaQuestionnaire1 extends JFrame {
 		answerButtonD.setBounds(317, 210, 212, 29);
 		contentPane.add(answerButtonD);
 		
-		JLabel lNemeaLabel_1 = new JLabel("");
-		lNemeaLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		JLabel NemeaLabel_1 = new JLabel("");
+		NemeaLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		Image img = new ImageIcon(this.getClass().getResource("/lioncape.png")).getImage();
-		lNemeaLabel_1.setIcon(new ImageIcon(img));
-		lNemeaLabel_1.setBounds(6, 6, 588, 99);
-		contentPane.add(lNemeaLabel_1);
+		NemeaLabel_1.setIcon(new ImageIcon(img));
+		NemeaLabel_1.setBounds(6, 6, 588, 99);
+		contentPane.add(NemeaLabel_1);
 	}
 }
