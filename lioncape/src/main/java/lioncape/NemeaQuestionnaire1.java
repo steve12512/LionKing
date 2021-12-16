@@ -71,7 +71,7 @@ public class NemeaQuestionnaire1 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis2.png");
-					JOptionPane.showMessageDialog(null, "BZZZZZZZZZZZZZZZZZ \nTry Again", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "BZZZZZZZZZZZZZZZZZ \nTry Again", "Diomidis Spinellis", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});

@@ -11,10 +11,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 
-public class Main {
+public class Start {
 
 	private JFrame frame;
 	private JLabel imageTitleLabel;
@@ -26,7 +25,7 @@ public class Main {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Main window = new Main();
+					Start window = new Start();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,7 +37,7 @@ public class Main {
 	/**
 	 * Create the application.
 	 */
-	public Main() {
+	public Start() {
 		initialize();
 	}
 
@@ -57,7 +56,7 @@ public class Main {
 		Image img = new ImageIcon(this.getClass().getResource("/lioncape.png")).getImage();
 		imageTitleLabel.setIcon(new ImageIcon(img));
 		
-		imageTitleLabel.setBounds(6, 96, 908, 214);
+		imageTitleLabel.setBounds(6, 35, 908, 318);
 		frame.getContentPane().add(imageTitleLabel);
 		
 		JButton startButton = new JButton("START");
@@ -72,7 +71,7 @@ public class Main {
 		startButton.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 26));
 		startButton.setBackground(new Color(0, 0, 0));
 		startButton.setForeground(new Color(255, 215, 0));
-		startButton.setBounds(380, 387, 171, 68);
+		startButton.setBounds(380, 387, 190, 90);
 		frame.getContentPane().add(startButton);
 		
 		JButton aboutGameButton = new JButton("About Game");
@@ -82,17 +81,22 @@ public class Main {
 		frame.getContentPane().add(aboutGameButton);
 		aboutGameButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/lion.png");
-				JOptionPane.showMessageDialog(null, "<html>The purpose of LIONCAPE is to teach us the 12 Feats of Hercules. <br>The game consists of 12 stages and each stage of 3 questions. <br>At each correct answer the player proceeds to the next question. <br>In each wrong question the player loses 1 life. <br>In the 3 lives that the player loses the game ends.</html>", "About Game", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				AboutGame aboutGame = new AboutGame();
+				aboutGame.setVisible(true);
 			}
 		});
-		aboutGameButton.setBounds(390, 492, 150, 51);
+		aboutGameButton.setBounds(380, 492, 190, 65);
 		frame.getContentPane().add(aboutGameButton);
 		
 		JButton quitButton = new JButton("Quit");
+		quitButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+			}
+		});
 		quitButton.setForeground(new Color(255, 0, 0));
 		quitButton.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		quitButton.setBounds(390, 590, 150, 51);
+		quitButton.setBounds(380, 574, 190, 65);
 		frame.getContentPane().add(quitButton);
 	}
 }

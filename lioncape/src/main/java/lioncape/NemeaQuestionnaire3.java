@@ -51,9 +51,9 @@ public class NemeaQuestionnaire3 extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("Who hosted Hercules before he killed the lion?");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 40));
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 35));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
-		lblNewLabel.setBounds(6, 47, 898, 67);
+		lblNewLabel.setBounds(6, 47, 898, 76);
 		contentPane.add(lblNewLabel);
 		
 		JButton answerButtonA = new JButton("A barman.");
