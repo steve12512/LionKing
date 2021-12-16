@@ -45,7 +45,7 @@ public class Start {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
+		frame = new JFrame("Lioncape");
 		frame.getContentPane().setBackground(new Color(0, 0, 0));
 		frame.setBounds(300, 80, 920, 740);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

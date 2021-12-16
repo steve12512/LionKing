@@ -41,6 +41,7 @@ public class NemeaQuestionnaire2 extends JFrame {
 	 * Create the frame.
 	 */
 	public NemeaQuestionnaire2() {
+		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
 		contentPane = new JPanel();
