@@ -16,21 +16,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-
-
-
-
-
-
-
-//  I KLASSI DEN INE ETIMI,INE COPY PASTE APO PROIGUMENI,PLEASE IMPLEMENT IT.
-
-
-
-
-
-
-public class NemeaQuestionnaire10 extends JFrame {
+public class NemeaQuestionnaire17 extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel playerHPLabel;
@@ -42,7 +28,7 @@ public class NemeaQuestionnaire10 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					NemeaQuestionnaire10 frame = new NemeaQuestionnaire10();
+					NemeaQuestionnaire17 frame = new NemeaQuestionnaire17();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -54,7 +40,7 @@ public class NemeaQuestionnaire10 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-		public NemeaQuestionnaire10() {
+	public NemeaQuestionnaire17() {
 		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
@@ -64,49 +50,49 @@ public class NemeaQuestionnaire10 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel(". You met with the kind centaur Pholus. After feasting with him, your opening of a precious Dionysean wine attracted many other centraurs who want to attack you. What do you do?");
+		JLabel lblNewLabel = new JLabel(". The birds are not moving at all. You cannot kill them if you cannot see them!");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 40));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonD = new JButton("I. I will stay away and hit them with my poisonous arrows");
-		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		answerButtonD.addActionListener(new ActionListener() {
+		JButton answerButtonC= new JButton("I will ask for help from the gods ");
+		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
+		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis6.png");
-				JOptionPane.showMessageDialog(null, "<html><You capture it easily without harming it! Smart!>BRAVO</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				JOptionPane.showMessageDialog(null, "<html><Strong>Athena, asks Hephaestus to make a rattle just foe this purpose\nBRAVO</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				dispose();
-				NemeaQuestionnaire11 nemea11 = new NemeaQuestionnaire11();
-				nemea11.setVisible(true);
+				NemeaQuestionnaire18 nemea18 = new NemeaQuestionnaire18();
+				nemea18.setVisible(true);
 			}
 		});
-		answerButtonD.setForeground(new Color(100, 149, 237));
-		answerButtonD.setBounds(145, 542, 300, 50);
-		contentPane.add(answerButtonD);
+		answerButtonC.setForeground(new Color(100, 149, 237));
+		answerButtonC.setBounds(145, 542, 300, 50);
+		contentPane.add(answerButtonC);
 		
-		JButton answerButtonA = new JButton("I will hit them with my club");
-		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		answerButtonA.addActionListener(new ActionListener() {
+		JButton answerButtonB = new JButton("I will yell really loud to scare them ");
+		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
+		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>You really look like an idiot. If birds could laugh, they would/Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis9.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong> They are too tall for you/nTry Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Whoa slow down cowboy!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
-		answerButtonA.setForeground(new Color(100, 149, 237));
-		answerButtonA.setBounds(469, 542, 300, 50);
-		contentPane.add(answerButtonA);
+		answerButtonB.setForeground(new Color(100, 149, 237));
+		answerButtonB.setBounds(469, 542, 300, 50);
+		contentPane.add(answerButtonB);
 		
-		JButton answerButtonC = new JButton("I will hit it with my club face-on");
+		JButton answerButtonA = new JButton("I will throw rocks at them");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
@@ -119,17 +105,17 @@ public class NemeaQuestionnaire10 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis8.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>They are drunk and beyond reasoning\nTry Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html>You cannot even see them!/html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
-		answerButtonC.setForeground(new Color(100, 149, 237));
-		answerButtonC.setBounds(145, 623, 300, 50);
-		contentPane.add(answerButtonC);
+		answerButtonA.setForeground(new Color(100, 149, 237));
+		answerButtonA.setBounds(145, 623, 300, 50);
+		contentPane.add(answerButtonA);
 		
-		JButton answerButtonB = new JButton("I will try to escape");
-		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		answerButtonB.addActionListener(new ActionListener() {
+		JButton answerButtonD = new JButton("I will wait for them to come out on their own.");
+		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
+		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
@@ -139,13 +125,13 @@ public class NemeaQuestionnaire10 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis7.png");
-					JOptionPane.showMessageDialog(null, "<html>Who runs faster: A man or 10 Horses?\nTry Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Days pass and no sign of them. They must be going out when you are sleeping</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
-		answerButtonB.setForeground(new Color(100, 149, 237));
-		answerButtonB.setBounds(469, 623, 300, 50);
-		contentPane.add(answerButtonB);
+		answerButtonD.setForeground(new Color(100, 149, 237));
+		answerButtonD.setBounds(469, 623, 300, 50);
+		contentPane.add(answerButtonD);
 		
 		JLabel NemeaLabel_2 = new JLabel("");
 		NemeaLabel_2.setHorizontalAlignment(SwingConstants.CENTER);

@@ -16,21 +16,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-
-
-
-
-
-
-
-//  I KLASSI DEN INE ETIMI,INE COPY PASTE APO PROIGUMENI,PLEASE IMPLEMENT IT.
-
-
-
-
-
-
-public class NemeaQuestionnaire10 extends JFrame {
+public class NemeaQuestionnaire13 extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel playerHPLabel;
@@ -42,7 +28,7 @@ public class NemeaQuestionnaire10 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					NemeaQuestionnaire10 frame = new NemeaQuestionnaire10();
+					NemeaQuestionnaire13 frame = new NemeaQuestionnaire13();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -54,7 +40,7 @@ public class NemeaQuestionnaire10 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-		public NemeaQuestionnaire10() {
+		public NemeaQuestionnaire13() {
 		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
@@ -64,29 +50,29 @@ public class NemeaQuestionnaire10 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel(". You met with the kind centaur Pholus. After feasting with him, your opening of a precious Dionysean wine attracted many other centraurs who want to attack you. What do you do?");
+		JLabel lblNewLabel = new JLabel("This assignment is intended to be both humiliating and impossible, since these divine livestock are immortal, they produced an enormous quantity of dung that has never been cleaned. How will you do it.");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 40));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonD = new JButton("I. I will stay away and hit them with my poisonous arrows");
+		JButton answerButtonD = new JButton("I will be rerouting the rivers Alpheus and Peneus to wash it out with my massive strength");
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis6.png");
-				JOptionPane.showMessageDialog(null, "<html><You capture it easily without harming it! Smart!>BRAVO</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				JOptionPane.showMessageDialog(null, "<html>Strong Boi</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				dispose();
-				NemeaQuestionnaire11 nemea11 = new NemeaQuestionnaire11();
-				nemea11.setVisible(true);
+				NemeaQuestionnaire14 nemea14 = new NemeaQuestionnaire14();
+				nemea14.setVisible(true);
 			}
 		});
 		answerButtonD.setForeground(new Color(100, 149, 237));
 		answerButtonD.setBounds(145, 542, 300, 50);
 		contentPane.add(answerButtonD);
 		
-		JButton answerButtonA = new JButton("I will hit them with my club");
+		JButton answerButtonA = new JButton("Little by little. My suffering will end at some point");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -98,7 +84,7 @@ public class NemeaQuestionnaire10 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis9.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong> They are too tall for you/nTry Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>It never ends… you are reduced to a janitor for all eternity/n</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -106,7 +92,7 @@ public class NemeaQuestionnaire10 extends JFrame {
 		answerButtonA.setBounds(469, 542, 300, 50);
 		contentPane.add(answerButtonA);
 		
-		JButton answerButtonC = new JButton("I will hit it with my club face-on");
+		JButton answerButtonC = new JButton("I am not doing that, that’s disgusting");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
@@ -119,7 +105,7 @@ public class NemeaQuestionnaire10 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis8.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>They are drunk and beyond reasoning\nTry Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>No U</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -127,7 +113,7 @@ public class NemeaQuestionnaire10 extends JFrame {
 		answerButtonC.setBounds(145, 623, 300, 50);
 		contentPane.add(answerButtonC);
 		
-		JButton answerButtonB = new JButton("I will try to escape");
+		JButton answerButtonB = new JButton("I will try to slay the cattle so they do not produce any more dung");
 		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -139,7 +125,7 @@ public class NemeaQuestionnaire10 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis7.png");
-					JOptionPane.showMessageDialog(null, "<html>Who runs faster: A man or 10 Horses?\nTry Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>.I said they are IMORTAL</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
