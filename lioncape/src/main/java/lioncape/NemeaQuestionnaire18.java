@@ -64,23 +64,10 @@ public class NemeaQuestionnaire18 extends JFrame {
 				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis6.png");
 				JOptionPane.showMessageDialog(null, "<html>You get some you lose some!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				dispose();
-				/* 
-				 * 
-				 *
-				 * 
-				 * 
-				 * 
-				 * CREATE THE CLASS FIRST
-				 * 
-				 * 
-				 * 
-					NemeaQuestionnaire16 nemea19 = new NemeaQuestionnaire19();
+				
+					NemeaQuestionnaire19 nemea19 = new NemeaQuestionnaire19();
 					nemea19.setVisible(true);
-					
-					*
-					*
-					*
-					*/
+				
 			}
 		});
 		answerButtonB.setForeground(new Color(100, 149, 237));
