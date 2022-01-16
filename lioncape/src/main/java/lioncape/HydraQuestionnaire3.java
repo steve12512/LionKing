@@ -1,23 +1,22 @@
 package lioncape;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import java.awt.EventQueue;
-
-import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.SwingConstants;
-import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
-public class NemeaQuestionnaire1 extends JFrame {
+public class HydraQuestionnaire3 extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel playerHPLabel;
@@ -29,7 +28,7 @@ public class NemeaQuestionnaire1 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					NemeaQuestionnaire1 frame = new NemeaQuestionnaire1();
+					HydraQuestionnaire3 frame = new HydraQuestionnaire3();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +39,7 @@ public class NemeaQuestionnaire1 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public NemeaQuestionnaire1() {
+	public HydraQuestionnaire3() {
 		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
@@ -50,14 +49,14 @@ public class NemeaQuestionnaire1 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("How did Hercules kill the lion of Nemea?");
+		JLabel lblNewLabel = new JLabel("<html>You defeated the monster! How will you prove it?</html>");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 40));
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 31));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("With his crossbow and sword.");
+		JButton answerButtonA = new JButton("<html>I’ll carry one of its heads with me.</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
@@ -69,8 +68,8 @@ public class NemeaQuestionnaire1 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis2.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>BZZZZZZZZZZZZZZZZZ Try Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis7.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Too heavy.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -78,25 +77,9 @@ public class NemeaQuestionnaire1 extends JFrame {
 		answerButtonA.setBounds(145, 542, 300, 50);
 		contentPane.add(answerButtonA);
 		
-		JButton answerButtonB = new JButton("With his bare hands.");
+		JButton answerButtonB = new JButton("<html>I will just leave, its corpse might be dangerous.</html>");
 		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonB.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>BRAVO</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				dispose();
-				NemeaQuestionnaire2 nemea2 = new NemeaQuestionnaire2();
-				nemea2.setVisible(true);
-			}
-		});
-		answerButtonB.setForeground(new Color(100, 149, 237));
-		answerButtonB.setBounds(469, 542, 300, 50);
-		contentPane.add(answerButtonB);
-		
-		JButton answerButtonC = new JButton("With his slingshot.");
-		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		answerButtonC.setBackground(new Color(255, 255, 255));
-		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
@@ -105,16 +88,34 @@ public class NemeaQuestionnaire1 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis4.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>BZZZZZZZZZZZZZZZZZ Try Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis10.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Ugh. Scary!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
+			}
+		});
+		answerButtonB.setForeground(new Color(100, 149, 237));
+		answerButtonB.setBounds(469, 542, 300, 50);
+		contentPane.add(answerButtonB);
+		
+		JButton answerButtonC = new JButton("<html>I will dip my weapons into its poisonous blood.</html>");
+		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
+		answerButtonC.setBackground(new Color(255, 255, 255));
+		answerButtonC.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br><Strong>BRAVO</Strong><br><br>Your arrows are now poisonous!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
+				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR SECOND LABOUR: THE LERNAEAN HYDRA</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
+				dispose();
+				CeryneianHindText ceryneianHindText = new CeryneianHindText();
+				ceryneianHindText.setVisible(true);
 			}
 		});
 		answerButtonC.setForeground(new Color(100, 149, 237));
 		answerButtonC.setBounds(145, 623, 300, 50);
 		contentPane.add(answerButtonC);
 		
-		JButton answerButtonD = new JButton("I don't know.");
+		JButton answerButtonD = new JButton("I will eat it to gain its power.");
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -125,8 +126,8 @@ public class NemeaQuestionnaire1 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis3.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>YOU HAVE TO KNOW Try Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis2.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Eating poison? Yum -_-</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});

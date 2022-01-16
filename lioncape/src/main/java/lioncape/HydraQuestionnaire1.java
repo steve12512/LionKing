@@ -1,23 +1,22 @@
 package lioncape;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import java.awt.EventQueue;
-
-import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.SwingConstants;
-import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
-public class NemeaQuestionnaire1 extends JFrame {
+public class HydraQuestionnaire1 extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel playerHPLabel;
@@ -29,7 +28,7 @@ public class NemeaQuestionnaire1 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					NemeaQuestionnaire1 frame = new NemeaQuestionnaire1();
+					HydraQuestionnaire1 frame = new HydraQuestionnaire1();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +39,7 @@ public class NemeaQuestionnaire1 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public NemeaQuestionnaire1() {
+	public HydraQuestionnaire1() {
 		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
@@ -50,14 +49,14 @@ public class NemeaQuestionnaire1 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("How did Hercules kill the lion of Nemea?");
+		JLabel lblNewLabel = new JLabel("<html>The Hydra emits toxic fumes that may poison you. How do you protect yourself?</html>");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 40));
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 31));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("With his crossbow and sword.");
+		JButton answerButtonA = new JButton("<html>I need no protection. I am the son of Zeus!</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
@@ -70,7 +69,7 @@ public class NemeaQuestionnaire1 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis2.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>BZZZZZZZZZZZZZZZZZ Try Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>BZZZZZZZZZZZZZZZZZ /nGet off your high horse Hercules!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -78,22 +77,22 @@ public class NemeaQuestionnaire1 extends JFrame {
 		answerButtonA.setBounds(145, 542, 300, 50);
 		contentPane.add(answerButtonA);
 		
-		JButton answerButtonB = new JButton("With his bare hands.");
+		JButton answerButtonB = new JButton("<html>I use a spare cloth to cover my mouth and nose.</html>");
 		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>BRAVO</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>BRAVO <br> The toxic particles are blocked!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				dispose();
-				NemeaQuestionnaire2 nemea2 = new NemeaQuestionnaire2();
-				nemea2.setVisible(true);
+				HydraQuestionnaire2 hydra2 = new HydraQuestionnaire2();
+				hydra2.setVisible(true);
 			}
 		});
 		answerButtonB.setForeground(new Color(100, 149, 237));
 		answerButtonB.setBounds(469, 542, 300, 50);
 		contentPane.add(answerButtonB);
 		
-		JButton answerButtonC = new JButton("With his slingshot.");
+		JButton answerButtonC = new JButton("<html>I do not come close to the Hydra and I try to hit it with a bow</html>");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
@@ -106,7 +105,7 @@ public class NemeaQuestionnaire1 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis4.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>BZZZZZZZZZZZZZZZZZ Try Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>The Hydra’s scales break your arrows in half./n Try Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -114,7 +113,7 @@ public class NemeaQuestionnaire1 extends JFrame {
 		answerButtonC.setBounds(145, 623, 300, 50);
 		contentPane.add(answerButtonC);
 		
-		JButton answerButtonD = new JButton("I don't know.");
+		JButton answerButtonD = new JButton("<html>I hold my breath.</html>");
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -126,7 +125,7 @@ public class NemeaQuestionnaire1 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis3.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>YOU HAVE TO KNOW Try Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Humans HAVE to breathe sometimes Again</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
