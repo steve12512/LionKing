@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class CeryneianHindQuestionnaire3 extends JFrame {
+public class ErymanthianBoarQuestionnaire2 extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel playerHPLabel;
@@ -28,7 +28,7 @@ public class CeryneianHindQuestionnaire3 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CeryneianHindQuestionnaire3 frame = new CeryneianHindQuestionnaire3();
+					ErymanthianBoarQuestionnaire2 frame = new ErymanthianBoarQuestionnaire2();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +39,7 @@ public class CeryneianHindQuestionnaire3 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CeryneianHindQuestionnaire3() {
+	public ErymanthianBoarQuestionnaire2() {
 		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
@@ -49,14 +49,14 @@ public class CeryneianHindQuestionnaire3 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("<html>King Eurystheus demands you hand the deer over to keep as a trophy. You:</html>");
+		JLabel lblNewLabel = new JLabel("<html>One of the wounded centaurs was a kind and immortal centaur Chiron, who got caught up in the battle by accident. His pain was so great that he decided to give up his immortality and take the place of Prometheus who was eternally being eaten by an eagle. What will you do about it?</html>");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 31));
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 17));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("<html>Refuse to give it to him.</html>");
+		JButton answerButtonA = new JButton("<html>Nothing. Who cares?</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
@@ -68,8 +68,8 @@ public class CeryneianHindQuestionnaire3 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis3.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>The royal guards catch you AND the deer.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis13.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>That’s mean?</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -77,24 +77,27 @@ public class CeryneianHindQuestionnaire3 extends JFrame {
 		answerButtonA.setBounds(145, 542, 300, 50);
 		contentPane.add(answerButtonA);
 		
-		JButton answerButtonB = new JButton("<html>Let the deer go free in the palace and see what.</html>");
+		JButton answerButtonB = new JButton("<html>I will ask Prometheus to help the man that sacrificed himself for him.</html>");
 		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis6.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br><Strong>BRAVO</Strong><br><br>The deer runs back to its goddess and the king cannot catch it!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR THIRD LABOUR: THE CERYNEIAN HIND/html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
-				dispose();
-				HydraText yhdraText = new HydraText();
-				yhdraText.setVisible(true);
+				if (hp.getHP() <= 1) {
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					dispose();
+				} else {
+					hp.setHP(hp.getHP() - 1);
+					playerHPLabel.setText(String.valueOf(hp.getHP()));
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis11.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>This is your fault too</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				}
 			}
 		});
 		answerButtonB.setForeground(new Color(100, 149, 237));
 		answerButtonB.setBounds(469, 542, 300, 50);
 		contentPane.add(answerButtonB);
 		
-		JButton answerButtonC = new JButton("<html>Give it to him freehandedly, my job here is done.</html>");
+		JButton answerButtonC = new JButton("<html>I will kill Chiron before he starts to suffer.</html>");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
@@ -106,8 +109,8 @@ public class CeryneianHindQuestionnaire3 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis2.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>That is not what you promised…</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis8.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Noble choice but no.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -115,20 +118,15 @@ public class CeryneianHindQuestionnaire3 extends JFrame {
 		answerButtonC.setBounds(145, 623, 300, 50);
 		contentPane.add(answerButtonC);
 		
-		JButton answerButtonD = new JButton("<html>Kill the deer to free it from its misery.</html>");
+		JButton answerButtonD = new JButton("<html>I will shoot the eagle with my bow while it is busy eating the centaur.</html>");
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-					dispose();
-				} else {
-					hp.setHP(hp.getHP() - 1);
-					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis4.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>NO! It’s the precious deer of Artemis</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				}
+				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis6.png");
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Bullseye!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				dispose();
+				ErymanthianBoarQuestionnaire3 Erymanthian3 = new ErymanthianBoarQuestionnaire3();
+				Erymanthian3.setVisible(true);
 			}
 		});
 		answerButtonD.setForeground(new Color(100, 149, 237));

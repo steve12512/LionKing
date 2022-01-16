@@ -14,7 +14,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class CeryneianHindText extends JFrame {
+public class ErymanthianBoarText extends JFrame {
 
 	private JPanel contentPane;
 	/**
@@ -24,7 +24,7 @@ public class CeryneianHindText extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CeryneianHindText frame = new CeryneianHindText();
+					ErymanthianBoarText frame = new ErymanthianBoarText();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +36,7 @@ public class CeryneianHindText extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CeryneianHindText() {
+	public ErymanthianBoarText() {
 		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
@@ -46,14 +46,14 @@ public class CeryneianHindText extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("<html>Angered by your success against the Nemean Lion and the Lernaean Hydra, Eurystheus, advised by Goddess Hera devised an altogether different task for you, commanding that you capture the Ceryneian Hind, a beast so fast it could outpace an arrow.<br><br>After a long search, you awoke one night and laid eyes on the elusive hind, which was only visible due to the glint of moonlight on its antlers. You then chased the hind on foot for a full year through Greece, Thrace, Istria, and the land of the Hyperboreans. This was the day. You finally caught up to it and you are close on its trail.</html>");
+		JLabel lblNewLabel = new JLabel("<html>Eurystheus seems disappointed that you had overcome yet another creature and he feels humiliated by the hind's escape, so he assigned you another dangerous task. By some accounts, the fourth labour is to bring the fearsome Erymanthian Boar back to him alive.<br><br> On the way to Mount Erymanthos where the boar lived, you decided to visit Pholus, a hospitable centaur and old friend. You met with him in the cave he called home and he offered you to eat with him.</html>");
 		lblNewLabel.setFont(new Font("Apple Color Emoji", Font.ITALIC, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setBounds(54, 195, 835, 462);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("CERYNEIAN HIND");
+		JLabel lblNewLabel_1 = new JLabel("ERYMANTHIAN BOAR");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setFont(new Font("Apple Color Emoji", Font.BOLD | Font.ITALIC, 60));
 		lblNewLabel_1.setForeground(new Color(255, 215, 0));
@@ -64,8 +64,8 @@ public class CeryneianHindText extends JFrame {
 		NextButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				CeryneianHindQuestionnaire1 ceryneianHindQuestionnaire1 = new CeryneianHindQuestionnaire1();
-				ceryneianHindQuestionnaire1.setVisible(true);
+				ErymanthianBoarQuestionnaire1 Erymanthian1 = new ErymanthianBoarQuestionnaire1();
+				Erymanthian1.setVisible(true);
 			}
 		});
 		NextButton.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 15));
