@@ -115,7 +115,7 @@ public class CretanBullQuestionnaire3 extends JFrame {
 		answerButtonC.setBounds(145, 623, 300, 50);
 		contentPane.add(answerButtonC);
 		
-		JButton answerButtonD = new JButton("<html>II will keep it as a pet.</html>");
+		JButton answerButtonD = new JButton("<html>I will keep it as a pet.</html>");
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

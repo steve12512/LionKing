@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class CretanBullQuestionnaire1 extends JFrame {
+public class MaresOfDiomedesQuestionnaire2 extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel playerHPLabel;
@@ -28,7 +28,7 @@ public class CretanBullQuestionnaire1 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CretanBullQuestionnaire1 frame = new CretanBullQuestionnaire1();
+					MaresOfDiomedesQuestionnaire2 frame = new MaresOfDiomedesQuestionnaire2();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +39,7 @@ public class CretanBullQuestionnaire1 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CretanBullQuestionnaire1() {
+	public MaresOfDiomedesQuestionnaire2() {
 		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
@@ -49,30 +49,30 @@ public class CretanBullQuestionnaire1 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("<html>King Minos suggests you get some help with this Labour. What will you say to him? </html>");
+		JLabel lblNewLabel = new JLabel("<html>How will you steal the horses?</html>");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 30));
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 31));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("<html>Thank you but I will decline the help. I can handle it.</html>");
+		JButton answerButtonA = new JButton("<html>I Have already prepared an army to fight his and I will steal them during the ruckus.</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis17.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You are a true hero.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You succeeded!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				dispose();
-				CretanBullQuestionnaire2 cretanBull2 = new CretanBullQuestionnaire2();
-				cretanBull2.setVisible(true);
+				CretanBullQuestionnaire3 cretanBull3 = new CretanBullQuestionnaire3();
+				cretanBull3.setVisible(true);
 			}
 		});
 		answerButtonA.setForeground(new Color(100, 149, 237));
 		answerButtonA.setBounds(145, 542, 300, 50);
 		contentPane.add(answerButtonA);
 		
-		JButton answerButtonB = new JButton("<html>Yes please I need some help. Give me your best soldiers.</html>");
+		JButton answerButtonB = new JButton("<html>I will hit it with my club, that will sure bring him down.</html>");
 		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -83,8 +83,8 @@ public class CretanBullQuestionnaire1 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis12.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>They will steal your labour.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis7.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>It throws you and your club into the air.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -92,7 +92,7 @@ public class CretanBullQuestionnaire1 extends JFrame {
 		answerButtonB.setBounds(469, 542, 300, 50);
 		contentPane.add(answerButtonB);
 		
-		JButton answerButtonC = new JButton("<html>Gods please help me.</html>");
+		JButton answerButtonC = new JButton("<html>I will shoot it with poisoned arrows, the beast is.</html>");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
@@ -104,8 +104,8 @@ public class CretanBullQuestionnaire1 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis7.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>They profoundly ignore you.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis12.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>The beast doesn’t feel the pain and with its last breath it tries to impale you</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -113,7 +113,7 @@ public class CretanBullQuestionnaire1 extends JFrame {
 		answerButtonC.setBounds(145, 623, 300, 50);
 		contentPane.add(answerButtonC);
 		
-		JButton answerButtonD = new JButton("<html>How dare you belittle me you peasant.</html>");
+		JButton answerButtonD = new JButton("<html>I will try to befriend it and escort it away.</html>");
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -124,8 +124,8 @@ public class CretanBullQuestionnaire1 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis10.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>This “peasant” sends you into prison forever.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis11.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br> It is a cow on testosterone, it won’t reason with you.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
