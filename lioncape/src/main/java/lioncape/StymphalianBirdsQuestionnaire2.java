@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class AugeanStablesQuestionnaire2 extends JFrame {
+public class StymphalianBirdsQuestionnaire2 extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel playerHPLabel;
@@ -28,7 +28,7 @@ public class AugeanStablesQuestionnaire2 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AugeanStablesQuestionnaire2 frame = new AugeanStablesQuestionnaire2();
+					StymphalianBirdsQuestionnaire2 frame = new StymphalianBirdsQuestionnaire2();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +39,7 @@ public class AugeanStablesQuestionnaire2 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public AugeanStablesQuestionnaire2() {
+	public StymphalianBirdsQuestionnaire2() {
 		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
@@ -49,30 +49,35 @@ public class AugeanStablesQuestionnaire2 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("<html>You succeeded! And as a reward you asked for 100 animals. Augeas refused. What do you do?</html>");
+		JLabel lblNewLabel = new JLabel("<html>The birds are not moving at all. You cannot kill them if you cannot see them!</html>");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 29));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("<html>I will go to the court. I need a lawyer!</html>");
+		JButton answerButtonA = new JButton("<html>I will yell really loud to scare them.</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You won the trial and the cattle!<br>Democracy was a big thing in ancient times</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				dispose();
-				AugeanStablesQuestionnaire3 Augean3 = new AugeanStablesQuestionnaire3();
-				Augean3.setVisible(true);
+				if (hp.getHP() <= 1) {
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					dispose();
+				} else {
+					hp.setHP(hp.getHP() - 1);
+					playerHPLabel.setText(String.valueOf(hp.getHP()));
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis7.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You really look like an idiot. If birds could laugh, they would</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				}
 			}
 		});
 		answerButtonA.setForeground(new Color(100, 149, 237));
 		answerButtonA.setBounds(145, 542, 300, 50);
 		contentPane.add(answerButtonA);
 		
-		JButton answerButtonB = new JButton("<html>I will kill him. Nobody disrespects me.</html>");
+		JButton answerButtonB = new JButton("<html>I will throw rocks at them.</html>");
 		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -84,7 +89,7 @@ public class AugeanStablesQuestionnaire2 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis2.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Whoa slow down cowboy!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You cannot even see them</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -92,28 +97,23 @@ public class AugeanStablesQuestionnaire2 extends JFrame {
 		answerButtonB.setBounds(469, 542, 300, 50);
 		contentPane.add(answerButtonB);
 		
-		JButton answerButtonC = new JButton("<html>I will steal the cattle at night.</html>");
+		JButton answerButtonC = new JButton("<html>I will ask for help from the gods.</html>");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-					dispose();
-				} else {
-					hp.setHP(hp.getHP() - 1);
-					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis13.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>How exactly will you secretly swipe 100 beefs without noise?</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				}
+				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Athena, asks Hephaestus to make a rattle just foe this purpose</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				dispose();
+				StymphalianBirdsQuestionnaire3 stymphalian3 = new StymphalianBirdsQuestionnaire3();
+				stymphalian3.setVisible(true);
 			}
 		});
 		answerButtonC.setForeground(new Color(100, 149, 237));
 		answerButtonC.setBounds(145, 623, 300, 50);
 		contentPane.add(answerButtonC);
 		
-		JButton answerButtonD = new JButton("<html>I will give up. He is a king after all.</html>");
+		JButton answerButtonD = new JButton("<html>I will wait for them to come out on their own.</html>");
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -125,7 +125,7 @@ public class AugeanStablesQuestionnaire2 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis11.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>So humble…so…sad.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Days pass and no sign of them.<br>They must be going out when you are sleeping</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});

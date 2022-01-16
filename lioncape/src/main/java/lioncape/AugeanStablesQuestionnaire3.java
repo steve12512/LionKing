@@ -56,7 +56,7 @@ public class AugeanStablesQuestionnaire3 extends JFrame {
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("<html> Leave, your feat is over anyway.</html>");
+		JButton answerButtonA = new JButton("<html>Leave, your feat is over anyway.</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
@@ -77,7 +77,7 @@ public class AugeanStablesQuestionnaire3 extends JFrame {
 		answerButtonA.setBounds(145, 542, 300, 50);
 		contentPane.add(answerButtonA);
 		
-		JButton answerButtonB = new JButton("<html>IGive the cattle back to Augeas and ask for his forgiveness.</html>");
+		JButton answerButtonB = new JButton("<html>Give the cattle back to Augeas and ask for his forgiveness.</html>");
 		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -105,7 +105,7 @@ public class AugeanStablesQuestionnaire3 extends JFrame {
 				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
 				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>He had it coming. Long Live the King!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR FIFTH LABOUR: THE AUGEAN STABLES/html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
+				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR FIFTH LABOUR: THE AUGEAN STABLES</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
 				dispose();
 				StymphalianBirdsText stymphalianBirds = new StymphalianBirdsText();
 				stymphalianBirds.setVisible(true);
