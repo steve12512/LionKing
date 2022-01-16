@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class StymphalianBirdsQuestionnaire3 extends JFrame {
+public class CretanBullQuestionnaire3 extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel playerHPLabel;
@@ -28,7 +28,7 @@ public class StymphalianBirdsQuestionnaire3 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					StymphalianBirdsQuestionnaire3 frame = new StymphalianBirdsQuestionnaire3();
+					CretanBullQuestionnaire3 frame = new CretanBullQuestionnaire3();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +39,7 @@ public class StymphalianBirdsQuestionnaire3 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public StymphalianBirdsQuestionnaire3() {
+	public CretanBullQuestionnaire3() {
 		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
@@ -49,14 +49,14 @@ public class StymphalianBirdsQuestionnaire3 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("<html>The magic rattle Hephaestus made for you to scare the birds away worked, and they are all aflight. How will you slay those troublemakers?</html>");
+		JLabel lblNewLabel = new JLabel("<html>You brought the bull to Eurystheus who asks you to get rid of the Bull. What do you do?</html>");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 21));
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 30));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("<html>I will hit them with my big club, but my body might be hit.</html>");
+		JButton answerButtonA = new JButton("<html>I will sacrifice it for the gods.</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
@@ -68,8 +68,8 @@ public class StymphalianBirdsQuestionnaire3 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis10.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You are torn by their metal beaks.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis2.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>It is not yours to sacrifice</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -77,27 +77,24 @@ public class StymphalianBirdsQuestionnaire3 extends JFrame {
 		answerButtonA.setBounds(145, 542, 300, 50);
 		contentPane.add(answerButtonA);
 		
-		JButton answerButtonB = new JButton("<html>I will cower in my impenetrable lion cape, but I won’t be able to hit them.</html>");
+		JButton answerButtonB = new JButton("<html>I will release it.</html>");
 		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-					dispose();
-				} else {
-					hp.setHP(hp.getHP() - 1);
-					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis13.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>They see that they cannot hit you so they leave.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				}
+				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>The bull now roams Athens.<br>That’s a great idea </html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
+				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR SEVENTH  LABOUR: THE CRETAN BULL</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
+				dispose();
+				MaresOfDiomedesText DiomedesText = new MaresOfDiomedesText();
+				DiomedesText.setVisible(true);
 			}
 		});
 		answerButtonB.setForeground(new Color(100, 149, 237));
 		answerButtonB.setBounds(469, 542, 300, 50);
 		contentPane.add(answerButtonB);
 		
-		JButton answerButtonC = new JButton("<html>I will offer them poisonous food.</html>");
+		JButton answerButtonC = new JButton("<html>I will eat it.</html>");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
@@ -109,8 +106,8 @@ public class StymphalianBirdsQuestionnaire3 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis11.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>They will not eat it.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis4.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Yummy sacred bull for a hungry boy.<br>Not a good idea</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -118,17 +115,20 @@ public class StymphalianBirdsQuestionnaire3 extends JFrame {
 		answerButtonC.setBounds(145, 623, 300, 50);
 		contentPane.add(answerButtonC);
 		
-		JButton answerButtonD = new JButton("<html>I will aim at them with my poisonous arrows, even though some will escape.</html>");
+		JButton answerButtonD = new JButton("<html>II will keep it as a pet.</html>");
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis6.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br> You get some you lose some.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR SIXTH  LABOUR: THE STYMPHALIAN BIRDS</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
-				dispose();
-				CretanBullText cretanBull = new CretanBullText();
-				cretanBull.setVisible(true);
+				if (hp.getHP() <= 1) {
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					dispose();
+				} else {
+					hp.setHP(hp.getHP() - 1);
+					playerHPLabel.setText(String.valueOf(hp.getHP()));
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis7.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>It doesn’t want to be your pet.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				}
 			}
 		});
 		answerButtonD.setForeground(new Color(100, 149, 237));
