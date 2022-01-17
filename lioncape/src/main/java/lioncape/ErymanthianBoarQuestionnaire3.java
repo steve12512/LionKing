@@ -56,20 +56,21 @@ public class ErymanthianBoarQuestionnaire3 extends JFrame {
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("<html>I will catch him during the winter. The thick snow will slow him down</html>");
+		JButton answerButtonA = new JButton("<html>I will catch him during the winter. The thick snow will slow him down.</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>The boar is slow and buried in snow. Easy catch!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-					final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR FOURTH LABOUR: THE ERYMANTHIAN BOAR/html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
-					dispose();
-					AugeanStablesText augeanStablesText = new AugeanStablesText();
-					augeanStablesText.setVisible(true);
-				}
-			});
+				hp.setHP(hp.getHP() - 1);
+				playerHPLabel.setText(String.valueOf(hp.getHP()));
+				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>The boar is slow and buried in snow. Easy catch!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
+				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR FOURTH LABOUR: THE ERYMANTHIAN BOAR</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
+				dispose();
+				AugeanStablesText augeanStablesText = new AugeanStablesText();
+				augeanStablesText.setVisible(true);
+			}
+		});
 		answerButtonA.setForeground(new Color(100, 149, 237));
 		answerButtonA.setBounds(145, 542, 300, 50);
 		contentPane.add(answerButtonA);
@@ -86,7 +87,7 @@ public class ErymanthianBoarQuestionnaire3 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis11.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>He can still take a break to throw you up the air.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>He can still take a break to throw you up the air.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -96,7 +97,6 @@ public class ErymanthianBoarQuestionnaire3 extends JFrame {
 		
 		JButton answerButtonC = new JButton("<html>I will catch him during the summer. The heat will exhaust him.</html>");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
@@ -107,7 +107,7 @@ public class ErymanthianBoarQuestionnaire3 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis4.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Nope</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>Nope!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -127,7 +127,7 @@ public class ErymanthianBoarQuestionnaire3 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis14.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Correct, but it blinds you too.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>Correct, but it blinds you too.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});

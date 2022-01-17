@@ -71,14 +71,12 @@ public class Start {
 		});
 		
 		startButton.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 26));
-		startButton.setBackground(new Color(0, 0, 0));
 		startButton.setForeground(new Color(255, 215, 0));
 		startButton.setBounds(380, 387, 190, 90);
 		frame.getContentPane().add(startButton);
 		
 		JButton aboutGameButton = new JButton("About Game");
 		aboutGameButton.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		aboutGameButton.setBackground(new Color(255, 255, 255));
 		aboutGameButton.setForeground(new Color(128, 128, 128));
 		frame.getContentPane().add(aboutGameButton);
 		aboutGameButton.addActionListener(new ActionListener() {

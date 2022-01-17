@@ -49,7 +49,7 @@ public class GoldenApplesOfHesperidesQuestionnaire3 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("<html>Atlas got the apples, but he doesn’t seem to want to go back to bearing such a heavy burden. He offered to return the apples to the king himself if you keep holding the heavens for  a while.</html>");
+		JLabel lblNewLabel = new JLabel("<html>Atlas got the apples, but he doesn't seem to want to go back to bearing such a heavy burden. He offered to return the apples to the king himself if you keep holding the heavens for  a while.</html>");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 19));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
@@ -58,7 +58,6 @@ public class GoldenApplesOfHesperidesQuestionnaire3 extends JFrame {
 		
 		JButton answerButtonA = new JButton("<html>OK I will wait here, I hope he does not take long!</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
@@ -69,7 +68,7 @@ public class GoldenApplesOfHesperidesQuestionnaire3 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis15.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>He never came back. Didn’t you expect that?</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>He never came back. Didn't you expect that?</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -89,7 +88,7 @@ public class GoldenApplesOfHesperidesQuestionnaire3 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis20.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You leave the sky to hit Atlas with your club and it falls on everyone’s heads crushing the earth.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>You leave the sky to hit Atlas with your club and it falls on everyone's heads crushing the earth.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -99,7 +98,6 @@ public class GoldenApplesOfHesperidesQuestionnaire3 extends JFrame {
 		
 		JButton answerButtonC = new JButton("<html>I will ask the gods to help him.</html>");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
@@ -110,7 +108,7 @@ public class GoldenApplesOfHesperidesQuestionnaire3 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis14.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>They are not responding.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>They are not responding.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -122,8 +120,10 @@ public class GoldenApplesOfHesperidesQuestionnaire3 extends JFrame {
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				hp.setHP(hp.getHP() + 1);
+				playerHPLabel.setText(String.valueOf(hp.getHP()));
 				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis6.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You tell him that he can take the apples to your quest giver if he holds the sky for a second so that you fix your lion cape that bothers you.<br>You promised to get the sky right after. You never did and you left him holding the skies, laughing and running away with the apples</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>You tell him that he can take the apples to your quest giver if he holds the sky for a second so that you fix your lion cape that bothers you.<br>You promised to get the sky right after. You never did and you left him holding the skies, laughing and running away with the apples</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
 				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR ELEVENTH LABOUR: THE GOLDEN APPLES OF THE HESPERIDES</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
 				dispose();

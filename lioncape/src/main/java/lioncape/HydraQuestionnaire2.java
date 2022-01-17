@@ -58,7 +58,6 @@ public class HydraQuestionnaire2 extends JFrame {
 		
 		JButton answerButtonA = new JButton("<html>I bonk it with my club.</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
@@ -77,7 +76,7 @@ public class HydraQuestionnaire2 extends JFrame {
 		answerButtonA.setBounds(145, 542, 300, 50);
 		contentPane.add(answerButtonA);
 		
-		JButton answerButtonB = new JButton("<html>I try to cut its heads off. They won’t keep multiplying right?</html>");
+		JButton answerButtonB = new JButton("<html>I try to cut its heads off. They wont keep multiplying right?</html>");
 		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -99,7 +98,6 @@ public class HydraQuestionnaire2 extends JFrame {
 		
 		JButton answerButtonC = new JButton("<html>I will call for help and we will burn the injured heads with a torch.</html>");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
@@ -113,7 +111,7 @@ public class HydraQuestionnaire2 extends JFrame {
 		answerButtonC.setBounds(145, 623, 300, 50);
 		contentPane.add(answerButtonC);
 		
-		JButton answerButtonD = new JButton("<html>I strangle its long necks</html>");
+		JButton answerButtonD = new JButton("<html>I strangle its long necks.</html>");
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -124,7 +122,7 @@ public class HydraQuestionnaire2 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis3.png");
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis17.png");
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Can you hug 9 monster necks at once? Hug me too!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
