@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class CattleOfGeryonQuestionnaire3 extends JFrame {
+public class CerberusQuestionnaire2 extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel playerHPLabel;
@@ -28,7 +28,7 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CattleOfGeryonQuestionnaire3 frame = new CattleOfGeryonQuestionnaire3();
+					CerberusQuestionnaire2 frame = new CerberusQuestionnaire2();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +39,7 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CattleOfGeryonQuestionnaire3() {
+	public CerberusQuestionnaire2() {
 		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
@@ -49,14 +49,14 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("<html>On hearing the commotion, Geryon sprang into action, carrying three shields and three spears, and wearing three helmets. He is attacking you and you do not have much time to react!</html>");
+		JLabel lblNewLabel = new JLabel("<html>While in the Underworld, you met Theseus and Pirithous. The two companions had been imprisoned by Hades for attempting to kidnap Persephone. Theseus can be saved but Pirithous is tied up very tightly. What will you do with them?</html>");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 19));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("<html>I will slay them him my club too.</html>");
+		JButton answerButtonA = new JButton("<html>I will try to rescue them both.</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
@@ -68,8 +68,8 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis7.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>It doesn’t work again.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis11.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You do not have the time to save both.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -77,7 +77,7 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 		answerButtonA.setBounds(145, 542, 300, 50);
 		contentPane.add(answerButtonA);
 		
-		JButton answerButtonB = new JButton("<html>I will attack one by one with my sword.</html>");
+		JButton answerButtonB = new JButton("<html>. I will leave them be, this is not my job.</html>");
 		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -88,8 +88,8 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis20.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Every body of the giant has its own sword and shield.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis3.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You are not a hero.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -97,25 +97,23 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 		answerButtonB.setBounds(469, 542, 300, 50);
 		contentPane.add(answerButtonB);
 		
-		JButton answerButtonC = new JButton("<html>I will aim with my arrow on his head.</html>");
+		JButton answerButtonC = new JButton("<html>I will rescue only Theseus, Pirithous has to pay for his sins.</html>");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis6.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>The giant falls down like a poppy witling.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR TENTH LABOUR: THE CATTLE OF GERYON</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
+				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>That’s what a down to earth hero would do.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				dispose();
-				GoldenApplesOfHesperidesText hesperidesText = new GoldenApplesOfHesperidesText();
-				hesperidesText.setVisible(true);
+				CerberusQuestionnaire3 cerberus3 = new CerberusQuestionnaire3();
+				cerberus3.setVisible(true);
 			}
 		});
 		answerButtonC.setForeground(new Color(100, 149, 237));
 		answerButtonC.setBounds(145, 623, 300, 50);
 		contentPane.add(answerButtonC);
 		
-		JButton answerButtonD = new JButton("<html>I will aim on his middle body.</html>");
+		JButton answerButtonD = new JButton("<html>I will rescue only Pirithous, the other one can save himself.</html>");
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -126,8 +124,8 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis12.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You hit it, but now the two other bodies defend ever better.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis15.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>He won’t budge and now you don’t have any time left to save anyone.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});

@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class CattleOfGeryonQuestionnaire3 extends JFrame {
+public class CerberusQuestionnaire1 extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel playerHPLabel;
@@ -28,7 +28,7 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CattleOfGeryonQuestionnaire3 frame = new CattleOfGeryonQuestionnaire3();
+					CerberusQuestionnaire1 frame = new CerberusQuestionnaire1();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +39,7 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CattleOfGeryonQuestionnaire3() {
+	public CerberusQuestionnaire1() {
 		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
@@ -49,14 +49,14 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("<html>On hearing the commotion, Geryon sprang into action, carrying three shields and three spears, and wearing three helmets. He is attacking you and you do not have much time to react!</html>");
+		JLabel lblNewLabel = new JLabel("<html>How will you go to the underworld?</html>");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 19));
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 31));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("<html>I will slay them him my club too.</html>");
+		JButton answerButtonA = new JButton("<html>I will dig a really big hole in the ground.</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
@@ -68,8 +68,8 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis7.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>It doesn’t work again.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis12.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You dig the deepest hole in the world and you encounter a boiling red liquid of fire.<br>Do not fall in.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -77,7 +77,7 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 		answerButtonA.setBounds(145, 542, 300, 50);
 		contentPane.add(answerButtonA);
 		
-		JButton answerButtonB = new JButton("<html>I will attack one by one with my sword.</html>");
+		JButton answerButtonB = new JButton("<html>I will ask the gods to take me.</html>");
 		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -88,8 +88,8 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis20.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Every body of the giant has its own sword and shield.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis2.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>The gods are not your personal carriage.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -97,27 +97,10 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 		answerButtonB.setBounds(469, 542, 300, 50);
 		contentPane.add(answerButtonB);
 		
-		JButton answerButtonC = new JButton("<html>I will aim with my arrow on his head.</html>");
+		JButton answerButtonC = new JButton("<html>I will die.</html>");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis6.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>The giant falls down like a poppy witling.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR TENTH LABOUR: THE CATTLE OF GERYON</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
-				dispose();
-				GoldenApplesOfHesperidesText hesperidesText = new GoldenApplesOfHesperidesText();
-				hesperidesText.setVisible(true);
-			}
-		});
-		answerButtonC.setForeground(new Color(100, 149, 237));
-		answerButtonC.setBounds(145, 623, 300, 50);
-		contentPane.add(answerButtonC);
-		
-		JButton answerButtonD = new JButton("<html>I will aim on his middle body.</html>");
-		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
@@ -126,9 +109,24 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis12.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You hit it, but now the two other bodies defend ever better.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis14.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You died.<br>Now how will you return to the surface?</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
+			}
+		});
+		answerButtonC.setForeground(new Color(100, 149, 237));
+		answerButtonC.setBounds(145, 623, 300, 50);
+		contentPane.add(answerButtonC);
+		
+		JButton answerButtonD = new JButton("<html>I will be a part of a holy ceremony, the Eleusinian Mysteries.</html>");
+		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
+		answerButtonD.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>The Eleusinian Mysteries opened a portal to the underworld.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				dispose();
+				CerberusQuestionnaire2 cerberus2 = new CerberusQuestionnaire2();
+				cerberus2.setVisible(true);
 			}
 		});
 		answerButtonD.setForeground(new Color(100, 149, 237));
