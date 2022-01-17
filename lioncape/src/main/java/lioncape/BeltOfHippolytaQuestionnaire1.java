@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class MaresOfDiomedesQuestionnaire2 extends JFrame {
+public class BeltOfHippolytaQuestionnaire1 extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel playerHPLabel;
@@ -28,7 +28,7 @@ public class MaresOfDiomedesQuestionnaire2 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MaresOfDiomedesQuestionnaire2 frame = new MaresOfDiomedesQuestionnaire2();
+					BeltOfHippolytaQuestionnaire1 frame = new BeltOfHippolytaQuestionnaire1();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +39,7 @@ public class MaresOfDiomedesQuestionnaire2 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MaresOfDiomedesQuestionnaire2() {
+	public BeltOfHippolytaQuestionnaire1() {
 		super("Lioncape");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(300, 80, 920, 740);
@@ -49,32 +49,17 @@ public class MaresOfDiomedesQuestionnaire2 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("<html>How will you steal the horses?</html>");
+		JLabel lblNewLabel = new JLabel("<html>You find the Queen of the Amazons, towering above you. How will you get the belt?</html>");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 31));
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 30));
 		lblNewLabel.setForeground(new Color(255, 215, 0));
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("<html>I Have already prepared an army to fight his and I will steal them during the ruckus.</html>");
+		JButton answerButtonA = new JButton("<html>I will murder the queen and take the belt.</html>");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.setBackground(Color.YELLOW);
 		answerButtonA.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis6.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Let’s Fight!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				dispose();
-				MaresOfDiomedesQuestionnaire3 maresOfDiomedes3 = new MaresOfDiomedesQuestionnaire3();
-				maresOfDiomedes3.setVisible(true);
-			}
-		});
-		answerButtonA.setForeground(new Color(100, 149, 237));
-		answerButtonA.setBounds(145, 542, 300, 50);
-		contentPane.add(answerButtonA);
-		
-		JButton answerButtonB = new JButton("<html>I will steal them in plain sight, what’s the worst that could happen?</html>");
-		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
-		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
@@ -84,15 +69,30 @@ public class MaresOfDiomedesQuestionnaire2 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis11.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Everyone sees you and takes you down swiftly.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Slow down with the murder please.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
+			}
+		});
+		answerButtonA.setForeground(new Color(100, 149, 237));
+		answerButtonA.setBounds(145, 542, 300, 50);
+		contentPane.add(answerButtonA);
+		
+		JButton answerButtonB = new JButton("<html>I will ask politely for the belt.</html>");
+		answerButtonB.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
+		answerButtonB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Your kindness and your wondrous deeds impress the Queen and she accepts.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				dispose();
+				BeltOfHippolytaQuestionnaire2 beltOfHippolyta2 = new BeltOfHippolytaQuestionnaire2();
+				beltOfHippolyta2.setVisible(true);
 			}
 		});
 		answerButtonB.setForeground(new Color(100, 149, 237));
 		answerButtonB.setBounds(469, 542, 300, 50);
 		contentPane.add(answerButtonB);
 		
-		JButton answerButtonC = new JButton("<html>I will ask him politely to give them. I cannot.</html>");
+		JButton answerButtonC = new JButton("<html>I will steal the belt.</html>");
 		answerButtonC.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonC.setBackground(new Color(255, 255, 255));
 		answerButtonC.addActionListener(new ActionListener() {
@@ -105,7 +105,7 @@ public class MaresOfDiomedesQuestionnaire2 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis2.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>So kind.<br>This will get you nowhere right now.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You are not a good sneak.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
@@ -113,7 +113,7 @@ public class MaresOfDiomedesQuestionnaire2 extends JFrame {
 		answerButtonC.setBounds(145, 623, 300, 50);
 		contentPane.add(answerButtonC);
 		
-		JButton answerButtonD = new JButton("<html>I will be very sneaky.</html>");
+		JButton answerButtonD = new JButton("<html>I will seduce Hippolyta.</html>");
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -124,8 +124,8 @@ public class MaresOfDiomedesQuestionnaire2 extends JFrame {
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis15.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You Failed.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis16.png");
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>The Queen is not interested in you. She has all that she needs right now.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
