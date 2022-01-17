@@ -67,7 +67,7 @@ public class EndOfFeatsText extends JFrame {
 		quitButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis21.png");
-				Object[] options = {"Yes, please", "No!"};
+				Object[] options = {"QUIT", "STAY"};
 				int response = JOptionPane.showOptionDialog(null, "<html><h1 style=\"text-align:center;\">THANK YOU FOR PLAYING LIONCAPE! </h1><br><h3 style=\\\"text-align:center;\\\">WE HOPE YOU LEARNED ABOUT THE LABOURS OF HERCULES WITH US AND THAT YOU HAD FUN!</h3>", "THANK YOU ", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, icon1, options, options[0]);
 				if (response == JOptionPane.YES_OPTION) {
 					dispose();
