@@ -103,7 +103,7 @@ public class HydraQuestionnaire3 extends JFrame {
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br><Strong>BRAVO</Strong><br><br>Your arrows are now poisonous!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Your arrows are now poisonous!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
 				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR SECOND LABOUR: THE LERNAEAN HYDRA</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
 				dispose();

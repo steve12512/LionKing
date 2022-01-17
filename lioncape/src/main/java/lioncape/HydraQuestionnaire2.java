@@ -103,7 +103,7 @@ public class HydraQuestionnaire2 extends JFrame {
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
-				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br><Strong>BRAVO</Strong><br><br> Your nephew Iolaos burns the cut heads the moment you cut them off so that they do not grow back. <br>Smart!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+				JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>Your nephew Iolaos burns the cut heads the moment you cut them off so that they do not grow back. <br>Smart!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				dispose();
 				HydraQuestionnaire3 hydra3 = new HydraQuestionnaire3();
 				hydra3.setVisible(true);

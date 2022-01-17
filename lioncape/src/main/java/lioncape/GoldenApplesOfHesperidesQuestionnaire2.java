@@ -110,7 +110,7 @@ public class GoldenApplesOfHesperidesQuestionnaire2 extends JFrame {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
 					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis11.png");
-					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br><Strong>You cannot move the tree.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
+					JOptionPane.showMessageDialog(null, "<html><Strong>Diomodis Spinellis said:</Strong><br><br>You cannot move the tree.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
 		});
