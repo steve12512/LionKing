@@ -133,12 +133,12 @@ public class CretanBullQuestionnaire1 extends JFrame {
 		answerButtonD.setBounds(469, 623, 300, 50);
 		contentPane.add(answerButtonD);
 		
-		JLabel NemeaLabel_1 = new JLabel("");
-		NemeaLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		Image img = new ImageIcon(this.getClass().getResource("/NemeaImg.png")).getImage();
-		NemeaLabel_1.setIcon(new ImageIcon(img));
-		NemeaLabel_1.setBounds(6, 107, 918, 420);
-		contentPane.add(NemeaLabel_1);
+		JLabel CretanBullLabel_1 = new JLabel("");
+		CretanBullLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		Image img = new ImageIcon(this.getClass().getResource("/CRETAN_BULL.jpg")).getImage();
+		CretanBullLabel_1.setIcon(new ImageIcon(img));
+		CretanBullLabel_1.setBounds(6, 107, 918, 420);
+		contentPane.add(CretanBullLabel_1);
 		
 		playerHPLabel = new JLabel("");
 		playerHPLabel.setFont(new Font("Lucida Grande", Font.BOLD, 18));
@@ -154,5 +154,33 @@ public class CretanBullQuestionnaire1 extends JFrame {
 		HealthPowerLabel.setForeground(new Color(255, 255, 255));
 		HealthPowerLabel.setBounds(6, 14, 116, 31);
 		contentPane.add(HealthPowerLabel);
+		
+		JLabel lblFeat = new JLabel("Feat:");
+		lblFeat.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFeat.setForeground(Color.WHITE);
+		lblFeat.setFont(new Font("Lucida Grande", Font.ITALIC, 15));
+		lblFeat.setBounds(648, 14, 53, 31);
+		contentPane.add(lblFeat);
+		
+		JLabel Feat12Label = new JLabel("7/12");
+		Feat12Label.setHorizontalAlignment(SwingConstants.CENTER);
+		Feat12Label.setForeground(Color.WHITE);
+		Feat12Label.setFont(new Font("Lucida Grande", Font.BOLD, 15));
+		Feat12Label.setBounds(689, 14, 61, 31);
+		contentPane.add(Feat12Label);
+		
+		JLabel QuestionnaireLabel = new JLabel("Questionnaire:");
+		QuestionnaireLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		QuestionnaireLabel.setForeground(Color.WHITE);
+		QuestionnaireLabel.setFont(new Font("Lucida Grande", Font.ITALIC, 15));
+		QuestionnaireLabel.setBounds(754, 14, 116, 31);
+		contentPane.add(QuestionnaireLabel);
+		
+		JLabel Questionnaire3Label = new JLabel("1/3");
+		Questionnaire3Label.setHorizontalAlignment(SwingConstants.CENTER);
+		Questionnaire3Label.setForeground(Color.WHITE);
+		Questionnaire3Label.setFont(new Font("Lucida Grande", Font.BOLD, 15));
+		Questionnaire3Label.setBounds(853, 14, 61, 31);
+		contentPane.add(Questionnaire3Label);
 	}
 }

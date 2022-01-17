@@ -137,7 +137,7 @@ public class NemeaQuestionnaire3 extends JFrame {
 		
 		JLabel NemeaLabel_3 = new JLabel("");
 		NemeaLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-		Image img = new ImageIcon(this.getClass().getResource("/NemeaImg.png")).getImage();
+		Image img = new ImageIcon(this.getClass().getResource("/NEMEA.jpg")).getImage();
 		NemeaLabel_3.setIcon(new ImageIcon(img));
 		NemeaLabel_3.setBounds(6, 107, 918, 420);
 		contentPane.add(NemeaLabel_3);
@@ -156,6 +156,34 @@ public class NemeaQuestionnaire3 extends JFrame {
 		HealthPowerLabel.setForeground(new Color(255, 255, 255));
 		HealthPowerLabel.setBounds(6, 14, 116, 31);
 		contentPane.add(HealthPowerLabel);
+		
+		JLabel lblFeat = new JLabel("Feat:");
+		lblFeat.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFeat.setForeground(Color.WHITE);
+		lblFeat.setFont(new Font("Lucida Grande", Font.ITALIC, 15));
+		lblFeat.setBounds(648, 14, 53, 31);
+		contentPane.add(lblFeat);
+		
+		JLabel Feat12Label = new JLabel("1/12");
+		Feat12Label.setHorizontalAlignment(SwingConstants.CENTER);
+		Feat12Label.setForeground(Color.WHITE);
+		Feat12Label.setFont(new Font("Lucida Grande", Font.BOLD, 15));
+		Feat12Label.setBounds(689, 14, 61, 31);
+		contentPane.add(Feat12Label);
+		
+		JLabel QuestionnaireLabel = new JLabel("Questionnaire:");
+		QuestionnaireLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		QuestionnaireLabel.setForeground(Color.WHITE);
+		QuestionnaireLabel.setFont(new Font("Lucida Grande", Font.ITALIC, 15));
+		QuestionnaireLabel.setBounds(754, 14, 116, 31);
+		contentPane.add(QuestionnaireLabel);
+		
+		JLabel Questionnaire3Label = new JLabel("3/3");
+		Questionnaire3Label.setHorizontalAlignment(SwingConstants.CENTER);
+		Questionnaire3Label.setForeground(Color.WHITE);
+		Questionnaire3Label.setFont(new Font("Lucida Grande", Font.BOLD, 15));
+		Questionnaire3Label.setBounds(853, 14, 61, 31);
+		contentPane.add(Questionnaire3Label);
 	}
 
 }

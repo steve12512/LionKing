@@ -18,6 +18,7 @@ public class Start {
 
 	private JFrame frame;
 	private JLabel imageTitleLabel;
+	
 
 	/**
 	 * Launch the application.
@@ -92,12 +93,18 @@ public class Start {
 		JButton quitButton = new JButton("Quit");
 		quitButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frame.dispose();
+				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis21.png");
+				Object[] options = {"Yes, please", "No!"};
+				int response = JOptionPane.showOptionDialog(null, "<html><h2 style=\\\"text-align:center;\\\">Would you like to quit?</h2></html>", "Message", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, icon1, options, options[0]);
+				if (response == JOptionPane.YES_OPTION) {
+					frame.dispose();
+				}
 			}
 		});
 		quitButton.setForeground(new Color(255, 0, 0));
 		quitButton.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		quitButton.setBounds(380, 574, 190, 65);
 		frame.getContentPane().add(quitButton);
+		
 	}
 }

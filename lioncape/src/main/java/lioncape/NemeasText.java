@@ -46,7 +46,7 @@ public class NemeasText extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("<html>You wandered around till you came across the town of Cleonae. <br>There, a boy gave you your first task. <br>He asked you to slay the Nemean lion and come back unscathed within 30 days. <br>If he did that, then the village would sacrifice another lion in his honour. <br>If not, then the boy would sacrifice himself to the gods to protect his city from the Nemean Lion. <br>You were wandering around the plains of Nemea until you heard a terrifying roar. <br>In front of you, jumped a huge male lion, previously hidden in the shrubbery. <br>His eyes bloodshot and his stance change in order to attack you.</html>");
+		JLabel lblNewLabel = new JLabel("<html>You wandered around till you came across the town of Cleonae. There, a boy gave you your first task. He asked you to slay the Nemean lion and come back unscathed within 30 days. If he did that, then the village would sacrifice another lion in his honour. If not, then the boy would sacrifice himself to the gods to protect his city from the Nemean Lion. You were wandering around the plains of Nemea until you heard a terrifying roar. In front of you, jumped a huge male lion, previously hidden in the shrubbery. His eyes bloodshot and his stance change in order to attack you.</html>");
 		lblNewLabel.setFont(new Font("Apple Color Emoji", Font.ITALIC, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setForeground(Color.WHITE);

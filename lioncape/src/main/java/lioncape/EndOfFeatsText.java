@@ -7,9 +7,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 
 import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -53,7 +56,7 @@ public class EndOfFeatsText extends JFrame {
 		lblNewLabel.setBounds(54, 195, 835, 462);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("CERBERUS");
+		JLabel lblNewLabel_1 = new JLabel("END OF FEATS");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setFont(new Font("Apple Color Emoji", Font.BOLD | Font.ITALIC, 60));
 		lblNewLabel_1.setForeground(new Color(255, 215, 0));
@@ -63,7 +66,12 @@ public class EndOfFeatsText extends JFrame {
 		JButton quitButton = new JButton("Quit");
 		quitButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
+				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis21.png");
+				Object[] options = {"Yes, please", "No!"};
+				int response = JOptionPane.showOptionDialog(null, "<html><h1 style=\"text-align:center;\">THANK YOU FOR PLAYING LIONCAPE! </h1><br><h3 style=\\\"text-align:center;\\\">WE HOPE YOU LEARNED ABOUT THE LABOURS OF HERCULES WITH US AND THAT YOU HAD FUN!</h3>", "THANK YOU ", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, icon1, options, options[0]);
+				if (response == JOptionPane.YES_OPTION) {
+					dispose();
+				}
 			}
 		});
 		quitButton.setForeground(new Color(255, 0, 0));
