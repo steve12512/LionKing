@@ -57,7 +57,11 @@ public class NemeaQuestionnaire2 extends JFrame {
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
+<<<<<<< HEAD
 		JButton answerButtonA = new JButton("I will wear it as armor.");
+=======
+		JButton answerButtonA = new JButton("He wear it on his back.");
+>>>>>>> parent of 8a032f8 (Update NemeaQuestionnaire2.java)
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
