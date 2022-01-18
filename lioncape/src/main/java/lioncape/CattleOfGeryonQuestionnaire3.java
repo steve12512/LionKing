@@ -104,7 +104,7 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 				playerHPLabel.setText(String.valueOf(hp.getHP()));
 				final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis6.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>The giant falls down like a poppy witling.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
+				final ImageIcon icon2 = new ImageIcon(getClass().getResource("/SpinellisCongratulations.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR TENTH LABOUR: THE CATTLE OF GERYON</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
 				dispose();
 				GoldenApplesOfHesperidesText hesperidesText = new GoldenApplesOfHesperidesText();

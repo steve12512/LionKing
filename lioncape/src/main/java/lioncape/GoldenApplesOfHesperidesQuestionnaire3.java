@@ -124,7 +124,7 @@ public class GoldenApplesOfHesperidesQuestionnaire3 extends JFrame {
 				playerHPLabel.setText(String.valueOf(hp.getHP()));
 				final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis6.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>You tell him that he can take the apples to your quest giver if he holds the sky for a second so that you fix your lion cape that bothers you.<br>You promised to get the sky right after. You never did and you left him holding the skies, laughing and running away with the apples</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
+				final ImageIcon icon2 = new ImageIcon(getClass().getResource("/SpinellisCongratulations.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR ELEVENTH LABOUR: THE GOLDEN APPLES OF THE HESPERIDES</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
 				dispose();
 				CerberusText cerberusText = new CerberusText();

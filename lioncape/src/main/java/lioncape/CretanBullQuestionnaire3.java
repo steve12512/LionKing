@@ -84,7 +84,7 @@ public class CretanBullQuestionnaire3 extends JFrame {
 				playerHPLabel.setText(String.valueOf(hp.getHP()));
 				final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis5.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>The bull now roams Athens.<br>That's a great idea!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
+				final ImageIcon icon2 = new ImageIcon(getClass().getResource("/SpinellisCongratulations.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR SEVENTH  LABOUR: THE CRETAN BULL</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
 				dispose();
 				MaresOfDiomedesText DiomedesText = new MaresOfDiomedesText();

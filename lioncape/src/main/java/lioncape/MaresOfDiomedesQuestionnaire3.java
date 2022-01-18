@@ -124,7 +124,7 @@ public class MaresOfDiomedesQuestionnaire3 extends JFrame {
 				playerHPLabel.setText(String.valueOf(hp.getHP()));
 				final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis5.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br> You feed him to his own horses and they are calm forever now.<br>Yay!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
+				final ImageIcon icon2 = new ImageIcon(getClass().getResource("/SpinellisCongratulations.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR EIGHTH LABOUR: THE MARES OF DIOMEDES</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
 				dispose();
 				BeltOfHippolytaText hippolytaText = new BeltOfHippolytaText();

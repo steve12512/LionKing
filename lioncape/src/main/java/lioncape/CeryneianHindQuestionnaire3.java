@@ -84,7 +84,7 @@ public class CeryneianHindQuestionnaire3 extends JFrame {
 				playerHPLabel.setText(String.valueOf(hp.getHP()));
 				final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis6.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>The deer runs back to its goddess and the king cannot catch it!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
+				final ImageIcon icon2 = new ImageIcon(getClass().getResource("/SpinellisCongratulations.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR THIRD LABOUR: THE CERYNEIAN HIND</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
 				dispose();
 				HydraText yhdraText = new HydraText();

@@ -104,7 +104,7 @@ public class AugeanStablesQuestionnaire3 extends JFrame {
 				playerHPLabel.setText(String.valueOf(hp.getHP()));
 				final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis5.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>He had it coming. Long Live the King!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
-				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
+				final ImageIcon icon2 = new ImageIcon(getClass().getResource("/SpinellisCongratulations.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR FIFTH LABOUR: THE AUGEAN STABLES</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
 				dispose();
 				StymphalianBirdsText stymphalianBirds = new StymphalianBirdsText();
