@@ -61,13 +61,13 @@ public class GoldenApplesOfHesperidesQuestionnaire3 extends JFrame {
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis15.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis15.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>He never came back. Didn't you expect that?</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
@@ -81,13 +81,13 @@ public class GoldenApplesOfHesperidesQuestionnaire3 extends JFrame {
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis20.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis20.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>You leave the sky to hit Atlas with your club and it falls on everyone's heads crushing the earth.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
@@ -101,13 +101,13 @@ public class GoldenApplesOfHesperidesQuestionnaire3 extends JFrame {
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis14.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis14.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>They are not responding.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
@@ -122,7 +122,7 @@ public class GoldenApplesOfHesperidesQuestionnaire3 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				hp.setHP(hp.getHP() + 1);
 				playerHPLabel.setText(String.valueOf(hp.getHP()));
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis6.png");
+				final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis6.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>You tell him that he can take the apples to your quest giver if he holds the sky for a second so that you fix your lion cape that bothers you.<br>You promised to get the sky right after. You never did and you left him holding the skies, laughing and running away with the apples</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
 				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR ELEVENTH LABOUR: THE GOLDEN APPLES OF THE HESPERIDES</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);

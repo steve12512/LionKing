@@ -61,13 +61,13 @@ public class MaresOfDiomedesQuestionnaire3 extends JFrame {
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis12.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis12.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>It is not their fault.<br>They were raised this way!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
@@ -81,13 +81,13 @@ public class MaresOfDiomedesQuestionnaire3 extends JFrame {
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis16.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis16.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>Wow...what a great friend.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
@@ -101,13 +101,13 @@ public class MaresOfDiomedesQuestionnaire3 extends JFrame {
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis11.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis11.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>Slow down on the arson.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
@@ -122,7 +122,7 @@ public class MaresOfDiomedesQuestionnaire3 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				hp.setHP(hp.getHP() + 1);
 				playerHPLabel.setText(String.valueOf(hp.getHP()));
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
+				final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis5.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br> You feed him to his own horses and they are calm forever now.<br>Yay!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
 				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR EIGHTH LABOUR: THE MARES OF DIOMEDES</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);

@@ -60,7 +60,7 @@ public class CretanBullQuestionnaire1 extends JFrame {
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis17.png");
+				final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis17.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>You are a true hero.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				dispose();
 				CretanBullQuestionnaire2 cretanBull2 = new CretanBullQuestionnaire2();
@@ -76,13 +76,13 @@ public class CretanBullQuestionnaire1 extends JFrame {
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis12.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis12.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>They will steal your labour.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
@@ -96,13 +96,13 @@ public class CretanBullQuestionnaire1 extends JFrame {
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis7.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis7.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>They profoundly ignore you.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
@@ -116,13 +116,13 @@ public class CretanBullQuestionnaire1 extends JFrame {
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis10.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis10.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>This 'peasant' sends you into prison forever.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}

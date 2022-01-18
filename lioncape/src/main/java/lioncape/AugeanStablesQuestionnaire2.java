@@ -60,7 +60,7 @@ public class AugeanStablesQuestionnaire2 extends JFrame {
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis5.png");
+				final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis5.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>You won the trial and the cattle!<br>Democracy was a big thing in ancient times</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				dispose();
 				AugeanStablesQuestionnaire3 Augean3 = new AugeanStablesQuestionnaire3();
@@ -76,13 +76,13 @@ public class AugeanStablesQuestionnaire2 extends JFrame {
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis2.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis2.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>Whoa slow down cowboy!</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
@@ -96,13 +96,13 @@ public class AugeanStablesQuestionnaire2 extends JFrame {
 		answerButtonC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis13.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis13.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>How exactly will you secretly swipe 100 beefs without noise?</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
@@ -116,13 +116,13 @@ public class AugeanStablesQuestionnaire2 extends JFrame {
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis11.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis11.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>So humble...so...sad.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}

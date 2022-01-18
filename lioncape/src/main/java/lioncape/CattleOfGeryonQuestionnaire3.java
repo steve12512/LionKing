@@ -61,13 +61,13 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis7.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis7.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>It doesn't work again.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
@@ -81,13 +81,13 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 		answerButtonB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis20.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis20.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>Every body of the giant has its own sword and shield.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}
@@ -102,7 +102,7 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				hp.setHP(hp.getHP() + 1);
 				playerHPLabel.setText(String.valueOf(hp.getHP()));
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis6.png");
+				final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis6.png"));
 				JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>The giant falls down like a poppy witling.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				final ImageIcon icon2 = new ImageIcon("src/main/resources/SpinellisCongratulations.png");
 				JOptionPane.showMessageDialog(null, "<html><Strong>CONGRATULATIONS!</Strong><br><br>YOU BEAT YOUR TENTH LABOUR: THE CATTLE OF GERYON</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon2);
@@ -120,13 +120,13 @@ public class CattleOfGeryonQuestionnaire3 extends JFrame {
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (hp.getHP() <= 1) {
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/SpinellisCry.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/SpinellisCry.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>GAME OVER</Strong></html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 					dispose();
 				} else {
 					hp.setHP(hp.getHP() - 1);
 					playerHPLabel.setText(String.valueOf(hp.getHP()));
-					final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis12.png");
+					final ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis12.png"));
 					JOptionPane.showMessageDialog(null, "<html><Strong>Diomidis Spinellis said:</Strong><br><br>You hit it, but now the two other bodies defend ever better.</html>", "Message", + JOptionPane.INFORMATION_MESSAGE, icon1);
 				}
 			}

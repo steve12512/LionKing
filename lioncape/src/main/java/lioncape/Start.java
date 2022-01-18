@@ -53,7 +53,7 @@ public class Start {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		ImageIcon image = new ImageIcon("/lion70.png");
+		ImageIcon image = new ImageIcon(getClass().getResource("/lion70.png"));
 		frame.setIconImage(image.getImage());
 		
 		imageTitleLabel = new JLabel("");
@@ -94,7 +94,7 @@ public class Start {
 		JButton quitButton = new JButton("Quit");
 		quitButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				final ImageIcon icon1 = new ImageIcon("src/main/resources/Spinellis21.png");
+				ImageIcon icon1 = new ImageIcon(getClass().getResource("/Spinellis21.png"));
 				Object[] options = {"Yes, please", "No!"};
 				int response = JOptionPane.showOptionDialog(null, "<html><h2 style=\\\"text-align:center;\\\"> Would you like to quit?</h2></html>", "Message", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, icon1, options, options[0]);
 				if (response == JOptionPane.YES_OPTION) {
