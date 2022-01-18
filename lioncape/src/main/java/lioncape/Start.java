@@ -53,6 +53,9 @@ public class Start {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+		ImageIcon image = new ImageIcon("/lion70.png");
+		frame.setIconImage(image.getImage());
+		
 		imageTitleLabel = new JLabel("");
 		imageTitleLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		Image img = new ImageIcon(this.getClass().getResource("/lioncape.png")).getImage();
