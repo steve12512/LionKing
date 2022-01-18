@@ -57,7 +57,7 @@ public class NemeaQuestionnaire2 extends JFrame {
 		lblNewLabel.setBounds(6, 47, 898, 67);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("He wear it on his back.");
+		JButton answerButtonA = new JButton("He wore it on his back.");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
