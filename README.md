@@ -1,8 +1,8 @@
 # Lioncape
 1) Οδηγίες Μεταγλώτισης του προγράμματος
-Κατεβάστε το lioncape 1.0 από τα releases κάτω δεξιά στο github
+        Έχει Maven άρα μπορεί να τρέξει σε όλους τους υπολογιστές.
 2) Οδηγίες Εκτέλεσης του προγράμματος
-        Διπλό κλικ στο εικονίδιο του «lioncape.jar” ή άνοιξε το command line στον φάκελο που είναι το «lioncape.jar” και γράψε την εντολή «“java -jar lioncape.jar»
+       Κατεβάστε το lioncape 1.0 από τα releases κάτω δεξιά στο github. Διπλό κλικ στο εικονίδιο του «lioncape.jar” ή άνοιξε το command line στον φάκελο που είναι το «lioncape.jar” και γράψε την εντολή «“java -jar lioncape.jar»
 3) Οδηγίες χρήσης του προγράμματος
         For each feat, read the lore info ,press "Next",and then read the questions and choose your answers.If you succeed you will proceed to the next question and eventually to the next feat. If not, you will either be given a second chance,depending on how much Health Points you have left,or the game will be terminated.Please enjoy
 5) Σύντομη παρουσίαση της δομής των περιεχομένων του αποθετηρίου
