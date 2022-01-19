@@ -57,7 +57,7 @@ public class NemeaQuestionnaire3 extends JFrame {
 		lblNewLabel.setBounds(6, 47, 898, 76);
 		contentPane.add(lblNewLabel);
 		
-		JButton answerButtonA = new JButton("I will cut it with the lion’s claw.");
+		JButton answerButtonA = new JButton("I will carry the lion to a tanner.");
 		answerButtonA.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -117,7 +117,7 @@ public class NemeaQuestionnaire3 extends JFrame {
 		answerButtonC.setBounds(145, 623, 300, 50);
 		contentPane.add(answerButtonC);
 		
-		JButton answerButtonD = new JButton("I will carry the lion to a tanner");
+		JButton answerButtonD = new JButton("I will cut it with the lion’s claw.");
 		answerButtonD.setFont(new Font("Lucida Grande", Font.BOLD | Font.ITALIC, 13));
 		answerButtonD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
